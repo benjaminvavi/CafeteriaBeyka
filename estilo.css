@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.modo-noche {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.modo-noche a {
+    color: #ff8ecb;
+}
+
+.encabezado {
+    background-color: #ffc0cb;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.modo-noche .encabezado {
+    background-color: #5a2c82;
+}
+
+.nombre-cafeteria {
+    font-size: 3.5rem;
+    text-align: center;
+    color: #9c003f;
+    margin-top: 30px;
+}
+
+body.modo-noche .nombre-cafeteria {
+    color: #d8b6ff;
+}
+
+.menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #b03060;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #800040;
+}
+
+body.modo-noche .menu a {
+    color: #e3c0ff;
+}
+
+.seccion {
+    padding: 50px 30px;
+    margin-bottom: 60px;
+    background-color: #ffd6e8;
+    border-radius: 15px;
+}
+
+.seccion h2 {
+    color: #cc3366;
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+}
+
+body.modo-noche .seccion {
+    background-color: #4a215f;
+}
+
+body.modo-noche .seccion h2 {
+    color: #d8b6ff;
+}
+
+.fotos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.fotos img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.fotos img:hover {
+    transform: scale(1.05);
+}
+
+.mapa {
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.pie {
+    background-color: #ffc0cb;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    color: #800040;
+    margin-top: 30px;
+}
+
+body.modo-noche .pie {
+    background-color: #5a2c82;
+    color: #f0e6ff;
+}
+
+.interruptor,
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.interruptor input,
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.deslizador,
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.deslizador:before,
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.interruptor input:checked + .deslizador,
+input:checked + .slider {
+    background-color: #ff69b4;
+}
+
+.interruptor input:checked + .deslizador:before,
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.formulario-reserva {
+    background-color: #ffe4ec;
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.modo-noche .formulario-reserva {
+    background-color: #3c1d4a;
+}
+
+.formulario-reserva label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #b03060;
+}
+
+body.modo-noche .formulario-reserva label {
+    color: #eacfff;
+}
+
+.formulario-reserva input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.formulario-reserva button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #cc3366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-reserva button:hover {
+    background-color: #a52a5a;
+}
+
+body.modo-noche .formulario-reserva button {
+    background-color: #8b4caf;
+}
+
+body.modo-noche .formulario-reserva button:hover {
+    background-color: #6d3791;
+}
+
+.imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.imagenes img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    margin: 10px;
+}
+
+.imagenes img:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.frase-inicio {
+    font-size: 1.3rem;
+    color: #800040;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+body.modo-noche .frase-inicio {
+    color: #e3c0ff;
+}
+
+#contacto ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#contacto li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+#contacto li::before {
+    content: "📞";
+    position: absolute;
+    left: 0;
+}
+
+#contacto li:nth-child(2)::before {
+    content: "📧";
+}
+
+#contacto li:nth-child(3)::before {
+    content: "📸";
+}
+
+#horario ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+#horario li {
+    padding: 10px 0;
+    border-bottom: 1px solid #d38da6;
+    font-weight: 500;
+}
+
+body.modo-noche #horario li {
+    border-color: #a468b4;
+}
+
+.subtexto-galeria {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #5c0036;
+    margin-bottom: 20px;
+}
+
+.subtexto-galeria a {
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.subtexto-galeria a:hover {
+    text-decoration: underline;
+}
+
+#frase {
+    text-align: center;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #ffe4ec;
+    border-radius: 20px;
+    max-width: 800px;
+}
+
+#frase h2 {
+    font-size: 2.2rem;
+    color: #800040;
+    font-style: italic;
+}
+
+body.modo-noche #frase {
+    background-color: #3b003f;
+}
+
+body.modo-noche #frase h2 {
+    color: #ffccf0;
+}

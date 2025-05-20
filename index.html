@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cafetería Beyka</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body onload="aplicarModoNocheGuardado()">
+  <header class="encabezado">
+    <h1 class="nombre-cafeteria">Cafetería Beyka</h1>
+
+    <nav class="menu">
+      <a href="#galeria">Un poco de nosotros</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#contacto">Contacto</a>
+      <a href="reservas.html">Reservas</a>
+    </nav>
+
+    
+    <div class="modo-noche-switch">
+      <label class="switch">
+        <input type="checkbox" id="modoNocheToggle" onclick="toggleModoNoche()">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+  </header>
+
+  <main class="contenido">
+    <section id="frase-motivadora" class="seccion" style="font-size: 2.5rem; text-align: center; margin: 3rem 0;">
+      Disfruta el sabor, comparte el momento
+    </section>
+
+    <section id="galeria" class="seccion">
+      <h2>Galería</h2>
+      <div class="imagenes">
+        <img src="img/interior.jpg" alt="Interior de la cafetería" />
+        <img src="img/cafe.jpg" alt="Taza de café" />
+        <img src="img/terraza.jpg" alt="Zona exterior" />
+      </div>
+      <p class="subtexto-galeria">
+        Conoce más de la cafetería en nuestro 
+        <a href="https://www.instagram.com/cafeteriabeyka" target="_blank">Instagram</a>.
+      </p>
+    </section>
+
+
+
+    <section id="horarios" class="seccion">
+      <h2>Horarios de Atención</h2>
+      <p>Lunes a Viernes: 8:00 AM - 8:00 PM</p>
+      <p>Sábados y Domingos: 9:00 AM - 5:00 PM</p>
+    </section>
+
+    <section id="ubicacion" class="seccion">
+      <h2>¿Dónde estamos?</h2>
+      <p>Dirección: Av Los Zapadores 1961, Conchalí, Santiago</p>
+      <p>Visítanos en nuestra dirección física y entérate más de nosotros.</p>
+      <p><a href="https://www.instagram.com/p/C88lSbUMi2I/" target="_blank">Cómo llegar desde el Metro Vivaceta</a></p>
+      <a href="https://www.google.com/maps/place/Cafeteria+beyka/@-33.3868319,-70.6822537,19z" target="_blank">
+        Ver en Google Maps
+      </a>
+      <div class="mapa">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d832.8489960318128!2d-70.6822537!3d-33.3868319!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c7b89a7dc043%3A0xf994d29e60e7dee!2sCafeteria%20beyka!5e0!3m2!1ses-419!2scl!4v1745709459603!5m2!1ses-419!2scl" 
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion">
+      <h2>Contacto</h2>
+      <ul>
+        <li>Teléfono: +56 9 4541 3057</li>
+        <li>Email: contacto@cafeteria.com</li>
+        <li>Instagram: <a href="https://www.instagram.com/cafeteriabeyka" target="_blank">@cafeteriabeyka</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p>&copy; 2025 Cafetería Beyka. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
